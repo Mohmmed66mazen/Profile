@@ -1,0 +1,182 @@
+/* Generec Style */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  margin: 0;
+  width: 100vw;
+  min-height: 100lvh;
+  /* change the color */
+  font-family: "Vazirmatn", sans-serif;
+  color: hsl(0 0% 100%);
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.8rem);
+  margin-bottom: 10px;
+}
+p {
+  font-size: clamp(1.5rem, 0.5vw + 1rem, 3rem);
+}
+p a {
+  background: linear-gradient(rgb(252, 232, 193), rgb(238, 192, 100));
+  background-clip: text;
+  cursor: pointer;
+  font-weight: 700;
+  color: transparent;
+}
+
+svg text {
+  font-size: clamp(2rem, 6vw + 1rem, 6rem);
+  font-weight: 600;
+}
+/* ----------------------landingPage---------------------- */
+
+#landingPage {
+  width: 100vw;
+  background: hsl(0 0% 100%);
+  color: hsl(0 0% 0%);
+  height: 200vh;
+}
+#landingPage svg {
+  --opacity: 1;
+  font-weight: 600;
+  font-size: clamp(2rem, 10vw + 1rem, 10rem);
+  /* transform-origin: 50% 50%; */
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  transform: scale(1);
+  left: 50%;
+  opacity: 0.4;
+  translate: -50% -50%;
+  overflow-x: hidden;
+}
+
+#content {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+#scrollNote {
+  color: rgb(80, 80, 80);
+  position: fixed;
+  bottom: 0;
+  font-weight: 100;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+/* -------------------------------------------------------- */
+.skills h2 {
+  margin-bottom: 30px;
+  padding-right: 5vw;
+}
+.personeDetals {
+  z-index: 5;
+  color: hsl(0, 0%, 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25vh;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  direction: rtl;
+}
+.inside {
+  display: grid;
+  place-items: center;
+  background-color: rgb(31, 31, 31);
+  border-radius: inherit;
+  height: 100%;
+}
+.aboutMe .inside {
+  padding: 28px 12px;
+}
+.aboutMe h2 {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.card {
+  margin: 0 auto;
+
+  border-radius: 16px;
+
+  position: relative;
+  z-index: inherit;
+}
+
+.aboutMe {
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgb(255, 215, 137) 50%,
+    transparent 99%
+  );
+  width: 85vw;
+  padding: 2px;
+  max-width: 100vh;
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgb(255, 215, 137) 50%,
+    transparent 99%
+  );
+}
+.icon {
+  height: 65%;
+}
+.grid-card {
+  width: 100vw;
+  row-gap: 12px;
+  max-width: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20vh;
+}
+.smaill-card {
+  width: 150px;
+  padding: 1px;
+  margin: 0 6px;
+
+  aspect-ratio: 1/1;
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgb(194, 224, 215) 50%,
+    transparent 99%
+  );
+}
+.card svg {
+  width: 20%;
+  fill: rgba(255, 255, 255, 0.871);
+}
+
+/* animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ffffff;
+  }
+  to {
+    text-shadow: 0 0 30px rgb(255, 215, 137), 0 0 10px #dbe8ea;
+  }
+}
